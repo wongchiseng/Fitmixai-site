@@ -20,17 +20,26 @@ export default function Home() {
         <h2 className="text-3xl font-bold mb-12">How it Works</h2>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="p-6">
-            <div className="text-4xl font-bold text-gray-200 dark:text-gray-700 mb-4">1</div>
+            <div className="relative aspect-[9/16] w-full max-w-[240px] mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-zinc-800">
+              <img src="/1.webp" alt="Upload photo step" className="object-cover w-full h-full" />
+              <div className="absolute top-4 left-4 bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">1</div>
+            </div>
             <h3 className="text-xl font-semibold mb-2">Upload your photo</h3>
             <p className="text-gray-600 dark:text-gray-400">Snap a quick photo or choose one from your gallery.</p>
           </div>
           <div className="p-6">
-            <div className="text-4xl font-bold text-gray-200 dark:text-gray-700 mb-4">2</div>
+            <div className="relative aspect-[9/16] w-full max-w-[240px] mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-zinc-800">
+              <img src="/2.webp" alt="Choose style step" className="object-cover w-full h-full" />
+              <div className="absolute top-4 left-4 bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">2</div>
+            </div>
             <h3 className="text-xl font-semibold mb-2">Choose clothing style</h3>
             <p className="text-gray-600 dark:text-gray-400">Select from streetwear, casual, formal, and more.</p>
           </div>
           <div className="p-6">
-            <div className="text-4xl font-bold text-gray-200 dark:text-gray-700 mb-4">3</div>
+            <div className="relative aspect-[9/16] w-full max-w-[240px] mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-zinc-800">
+              <img src="/3.webp" alt="AI generate step" className="object-cover w-full h-full" />
+              <div className="absolute top-4 left-4 bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">3</div>
+            </div>
             <h3 className="text-xl font-semibold mb-2">AI generates outfit</h3>
             <p className="text-gray-600 dark:text-gray-400">See your new look instantly styled by AI.</p>
           </div>

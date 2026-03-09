@@ -48,7 +48,28 @@ export default function Features() {
         ))}
       </div>
 
-      <div className="mt-20 text-center bg-blue-600 dark:bg-blue-600/20 text-white dark:text-blue-100 p-12 border dark:border-blue-500/30 rounded-3xl">
+      {/* APP SHOWCASE GALLERY */}
+      <div className="mt-24">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">App Interface Showcase</h2>
+          <p className="text-gray-600 dark:text-gray-400">Sneak peek into the Fitmixai app experience.</p>
+        </div>
+        
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 lg:gap-8">
+          {[5, 6, 7, 8, 9, 10, 11, 12, 13].map((num) => (
+            <div key={num} className="relative rounded-3xl overflow-hidden border border-gray-100 dark:border-zinc-800 shadow-sm hover:shadow-xl transition duration-300">
+              <img 
+                src={`/${num}.webp`} 
+                alt={`App Interface ${num}`} 
+                className="w-full h-auto object-cover" 
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="mt-24 text-center bg-blue-600 dark:bg-blue-600/20 text-white dark:text-blue-100 p-12 border dark:border-blue-500/30 rounded-3xl">
         <h2 className="text-3xl font-bold mb-4">Ready to upgrade your wardrobe?</h2>
         <p className="mb-8">Experience the future of fashion currently in development.</p>
         <a href="/contact" className="bg-white dark:bg-blue-500 text-blue-600 dark:text-white px-8 py-3 rounded-full font-bold hover:bg-gray-100 dark:hover:bg-blue-600 transition inline-block">
