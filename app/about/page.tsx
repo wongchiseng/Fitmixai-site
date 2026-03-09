@@ -5,10 +5,10 @@ export const metadata = {
 
 export default function About() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-20 prose prose-lg prose-blue">
+    <div className="max-w-4xl mx-auto px-6 py-20 prose prose-lg prose-blue dark:prose-invert text-justify">
       <h1 className="text-center">About FitMixs</h1>
       
-      <p className="lead text-center mb-12 text-gray-600">
+      <p className="lead text-center mb-12 text-gray-600 dark:text-gray-400">
         Our mission is to make choosing clothes easier, more inspiring, and universally accessible using the power of AI.
       </p>
 
@@ -32,7 +32,7 @@ export default function About() {
         <li><strong>Discover Yourself:</strong> Step out of your comfort zone and try styles you normally wouldn't pick off the rack.</li>
       </ul>
 
-      <div className="mt-12 text-center p-8 bg-gray-50 rounded-2xl not-prose">
+      <div className="mt-12 text-center p-8 bg-gray-50 dark:bg-zinc-900 rounded-2xl not-prose border dark:border-zinc-800">
         <h3 className="text-2xl font-bold mb-4">Want to get in touch?</h3>
         <a href="/contact" className="text-blue-600 font-semibold hover:underline">Contact Kit &rarr;</a>
       </div>

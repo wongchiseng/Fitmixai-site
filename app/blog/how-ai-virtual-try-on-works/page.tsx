@@ -5,8 +5,8 @@ export const metadata = {
 
 export default function BlogPostTwo() {
   return (
-    <article className="max-w-3xl mx-auto px-6 py-20 prose prose-lg prose-blue">
-      <p className="text-gray-500 mb-2">March 1, 2026</p>
+    <article className="max-w-3xl mx-auto px-6 py-20 prose prose-lg prose-blue dark:prose-invert text-justify">
+      <p className="text-gray-500 dark:text-gray-400 mb-2">March 1, 2026</p>
       <h1>How AI Virtual Try-On Actually Works</h1>
       
       <p>

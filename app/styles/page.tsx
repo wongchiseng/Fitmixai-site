@@ -16,16 +16,16 @@ export default function Styles() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-12">
       <h1 className="text-4xl font-bold mb-4 text-center">Explore Fashion Styles</h1>
-      <p className="text-xl text-gray-600 mb-12 text-center max-w-2xl mx-auto">
+      <p className="text-xl text-gray-600 dark:text-gray-400 text-justify mb-12 text-center max-w-2xl mx-auto">
         Discover different aesthetics and use our AI Outfit Generator to visualize yourself in these trending styles.
       </p>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {stylesList.map((s) => (
           <a key={s.slug} href={`/styles/${s.slug}`} className="block group">
-            <div className="bg-gray-100 rounded-2xl p-8 h-64 flex flex-col justify-end group-hover:bg-gray-200 transition">
+            <div className="bg-gray-100 dark:bg-zinc-900 rounded-2xl p-8 h-64 flex flex-col justify-end group-hover:bg-gray-200 dark:hover:bg-zinc-800 transition dark:border dark:border-zinc-800">
               <h2 className="text-2xl font-bold mb-2">{s.name}</h2>
-              <p className="text-gray-700">{s.desc}</p>
+              <p className="text-gray-700 dark:text-gray-400 text-justify">{s.desc}</p>
             </div>
           </a>
         ))}

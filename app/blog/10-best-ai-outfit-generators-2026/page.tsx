@@ -5,8 +5,8 @@ export const metadata = {
 
 export default function BlogPostOne() {
   return (
-    <article className="max-w-3xl mx-auto px-6 py-20 prose prose-lg prose-blue">
-      <p className="text-gray-500 mb-2">March 9, 2026</p>
+    <article className="max-w-3xl mx-auto px-6 py-20 prose prose-lg prose-blue dark:prose-invert text-justify">
+      <p className="text-gray-500 dark:text-gray-400 mb-2">March 9, 2026</p>
       <h1>10 Best AI Outfit Generators in 2026</h1>
       
       <p>

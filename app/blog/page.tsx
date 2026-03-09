@@ -26,12 +26,12 @@ export default function Blog() {
       <div className="grid gap-8">
         {posts.map(post => (
           <a key={post.slug} href={`/blog/${post.slug}`} className="block group">
-            <div className="border border-gray-200 rounded-3xl p-8 hover:shadow-lg transition">
-              <p className="text-sm text-gray-500 mb-2">{post.date}</p>
+            <div className="border border-gray-200 dark:border-zinc-800 dark:bg-zinc-900/50 rounded-3xl p-8 hover:shadow-lg dark:hover:border-zinc-600 transition">
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">{post.date}</p>
               <h2 className="text-2xl font-bold mb-3 group-hover:text-blue-600 transition">
                 {post.title}
               </h2>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-400 text-justify">
                 {post.summary}
               </p>
             </div>
