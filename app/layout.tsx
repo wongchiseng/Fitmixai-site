@@ -1,5 +1,18 @@
 import type { Metadata } from 'next';
+import { Cormorant_Garamond, Manrope } from 'next/font/google';
+import Link from 'next/link';
 import './globals.css';
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  variable: '--font-sans',
+});
+
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  variable: '--font-display',
+  weight: ['500', '600', '700'],
+});
 
 export const metadata: Metadata = {
   title: 'Fitmixai - AI Outfit Generator & Virtual Try-On',
@@ -29,50 +42,50 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        <nav className="flex items-center justify-between p-6 max-w-7xl mx-auto dark:text-gray-100">
-          <a href="/" className="text-2xl font-bold">Fitmixai</a>
-          <div className="space-x-4 flex">
-            <a href="/features" className="hover:text-blue-600 dark:hover:text-blue-400">Features</a>
-            <a href="/styles" className="hover:text-blue-600 dark:hover:text-blue-400">Styles</a>
-            <a href="/blog" className="hover:text-blue-600 dark:hover:text-blue-400">Blog</a>
-            <a href="/contact" className="hover:text-blue-600 dark:hover:text-blue-400">Contact</a>
+      <body className={`${manrope.variable} ${cormorant.variable}`}>
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 text-[15px] dark:text-stone-100">
+          <Link href="/" className="font-display text-3xl font-semibold uppercase tracking-[0.08em]">
+            Fitmixai
+          </Link>
+          <div className="flex items-center gap-5 text-sm uppercase tracking-[0.2em] text-stone-600 dark:text-stone-400">
+            <Link href="/features" className="site-link">Features</Link>
+            <Link href="/styles" className="site-link">Styles</Link>
+            <Link href="/blog" className="site-link">Blog</Link>
+            <Link href="/contact" className="site-link">Contact</Link>
           </div>
         </nav>
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <footer className="bg-gray-50 dark:bg-zinc-950 border-t dark:border-zinc-800 py-12 mt-20">
-          <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <main className="min-h-screen">{children}</main>
+        <footer className="mt-20 border-t border-black/6 bg-[linear-gradient(180deg,rgba(243,237,228,0.52)_0%,rgba(255,255,255,0.9)_100%)] py-12 dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(33,30,28,0.94)_0%,rgba(10,10,10,0.98)_100%)]">
+          <div className="mx-auto grid max-w-7xl grid-cols-2 gap-8 px-6 md:grid-cols-4">
             <div>
-              <h3 className="font-bold mb-4">Fitmixai</h3>
-              <p className="text-sm text-gray-500 dark:text-gray-400">AI Outfit Generator & Virtual Try-On</p>
+              <h3 className="font-display mb-4 text-2xl font-semibold">Fitmixai</h3>
+              <p className="text-sm text-stone-500 dark:text-stone-400">AI Outfit Generator & Virtual Try-On</p>
             </div>
             <div>
-              <h4 className="font-semibold mb-3">Links</h4>
-              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                <li><a href="/features">Features</a></li>
-                <li><a href="/styles">Styles</a></li>
-                <li><a href="/blog">Blog</a></li>
+              <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-stone-500 dark:text-stone-400">Links</h4>
+              <ul className="space-y-2 text-sm text-stone-600 dark:text-stone-400">
+                <li><Link href="/features">Features</Link></li>
+                <li><Link href="/styles">Styles</Link></li>
+                <li><Link href="/blog">Blog</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3">Company</h4>
-              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
-                <li><a href="/blog">Blog</a></li>
+              <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-stone-500 dark:text-stone-400">Company</h4>
+              <ul className="space-y-2 text-sm text-stone-600 dark:text-stone-400">
+                <li><Link href="/about">About</Link></li>
+                <li><Link href="/contact">Contact</Link></li>
+                <li><Link href="/blog">Blog</Link></li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold mb-3">Legal</h4>
-              <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-400">
-                <li><a href="/privacy">Privacy Policy</a></li>
-                <li><a href="/terms">Terms of Service</a></li>
+              <h4 className="mb-3 text-sm font-semibold uppercase tracking-[0.22em] text-stone-500 dark:text-stone-400">Legal</h4>
+              <ul className="space-y-2 text-sm text-stone-600 dark:text-stone-400">
+                <li><Link href="/privacy">Privacy Policy</Link></li>
+                <li><Link href="/terms">Terms of Service</Link></li>
               </ul>
             </div>
           </div>
-          <div className="max-w-7xl mx-auto px-6 mt-12 text-center text-sm text-gray-400 dark:text-gray-500">
+          <div className="mx-auto mt-12 max-w-7xl px-6 text-center text-sm text-stone-400 dark:text-stone-500">
             &copy; {new Date().getFullYear()} Fitmixai. All rights reserved.
           </div>
         </footer>

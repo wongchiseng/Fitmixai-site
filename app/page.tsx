@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const steps = [
   {
@@ -23,59 +24,108 @@ const steps = [
 
 export default function Home() {
   return (
-    <div className="max-w-7xl mx-auto px-6 py-12 space-y-32">
-      <section className="text-center space-y-6 pt-12">
-        <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
-          AI Outfit Generator & <br className="hidden md:block"/> Virtual Try-On
-        </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-          Upload a photo and instantly try different outfits with AI. 
-          Discover new fashion styles and create your perfect look.
-        </p>
-        <div className="pt-4">
-          <a href="/features" className="bg-black dark:bg-white text-white dark:text-black px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-800 dark:hover:bg-gray-200 transition">
-            Explore Features
-          </a>
+    <div className="mx-auto max-w-7xl px-6 py-10 md:py-14">
+      <section className="relative overflow-hidden rounded-[2.5rem] border border-black/6 bg-[linear-gradient(135deg,rgba(255,253,250,0.95)_0%,rgba(244,235,220,0.88)_45%,rgba(255,255,255,0.86)_100%)] px-6 py-14 dark:border-white/8 dark:bg-[linear-gradient(135deg,rgba(34,30,27,0.95)_0%,rgba(25,21,19,0.95)_48%,rgba(15,15,15,0.98)_100%)] md:px-10 md:py-20">
+        <div className="absolute inset-x-0 top-0 h-40 bg-[radial-gradient(circle_at_top,rgba(212,162,90,0.18),transparent_60%)]" />
+        <div className="grid items-end gap-14 lg:grid-cols-[1.02fr_0.98fr]">
+          <div className="relative z-10">
+            <span className="eyebrow">AI Styling Studio</span>
+            <h1 className="mt-8 max-w-4xl text-5xl font-semibold leading-[0.92] tracking-[-0.04em] md:text-7xl">
+              AI Outfit Generator and virtual try-on, designed like a finished product.
+            </h1>
+            <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-600 dark:text-stone-400 md:text-xl">
+              Fitmixai turns one portrait into a sharper styling workflow: discover looks, test garments, and generate polished outfit previews with a coherent visual system.
+            </p>
+            <div className="mt-10 flex flex-wrap items-center gap-4">
+              <Link
+                href="/features"
+                className="rounded-full bg-stone-950 px-8 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-stone-50 hover:bg-stone-800 dark:bg-stone-50 dark:text-stone-950 dark:hover:bg-stone-200"
+              >
+                Explore Features
+              </Link>
+              <Link
+                href="/contact"
+                className="rounded-full border border-black/10 px-8 py-4 text-sm font-semibold uppercase tracking-[0.22em] text-stone-700 hover:border-amber-600 hover:text-amber-700 dark:border-white/12 dark:text-stone-200 dark:hover:border-amber-400 dark:hover:text-amber-300"
+              >
+                Talk to Us
+              </Link>
+            </div>
+          </div>
+
+          <div className="relative grid gap-4 sm:grid-cols-2 sm:grid-rows-[1.1fr_0.9fr]">
+            <article className="editorial-card grain rounded-[2rem] p-3 sm:row-span-2">
+              <div className="image-stage h-[440px] sm:h-full">
+                <Image
+                  src="/13.webp"
+                  alt="Fitmixai generated fashion preview"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 420px"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </article>
+            <article className="editorial-card grain rounded-[2rem] p-3">
+              <div className="image-stage h-[210px]">
+                <Image
+                  src="/5.webp"
+                  alt="Fitmixai wardrobe browsing interface"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 240px"
+                  className="object-cover"
+                />
+              </div>
+            </article>
+            <article className="editorial-card grain rounded-[2rem] p-3 sm:translate-x-10">
+              <div className="image-stage h-[210px]">
+                <Image
+                  src="/9.webp"
+                  alt="Fitmixai outfit combination screen"
+                  fill
+                  sizes="(max-width: 640px) 100vw, 240px"
+                  className="object-cover"
+                />
+              </div>
+            </article>
+          </div>
         </div>
       </section>
 
-      <section className="rounded-[2rem] bg-[linear-gradient(180deg,#f8f5ef_0%,#ffffff_100%)] px-6 py-16 dark:bg-[linear-gradient(180deg,rgba(37,35,31,0.9)_0%,rgba(10,10,10,1)_100%)] md:px-10">
+      <section className="mt-24 rounded-[2.5rem] px-1">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold md:text-4xl">How it Works</h2>
-          <p className="mt-4 text-base text-gray-600 dark:text-gray-400 md:text-lg">
-            A simple three-step flow, presented like a product walkthrough instead of three disconnected screenshots.
+          <span className="eyebrow">How It Works</span>
+          <h2 className="mt-7 text-4xl font-semibold tracking-[-0.03em] md:text-5xl">
+            Three screens, one visual story.
+          </h2>
+          <p className="mt-4 text-base leading-8 text-stone-600 dark:text-stone-400 md:text-lg">
+            The product should feel editorial and deliberate. Each original image now carries a clearer role in the user journey instead of being trapped inside a fake device shell.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-3">
-          {steps.map((step) => (
-            <article
-              key={step.number}
-              className="rounded-[2rem] border border-black/5 bg-white/85 p-5 text-center shadow-[0_20px_60px_rgba(0,0,0,0.06)] backdrop-blur dark:border-white/10 dark:bg-zinc-950/75"
-            >
-              <div className="mb-6 flex items-center justify-between text-left">
+        <div className="mt-14 grid gap-8 md:grid-cols-3">
+          {steps.map((step, index) => (
+            <article key={step.number} className="editorial-card rounded-[2rem] p-4 md:p-5">
+              <div className="mb-5 flex items-center justify-between">
                 <span className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-700 dark:text-amber-300">
                   Step {step.number}
                 </span>
-                <span className="rounded-full bg-black px-3 py-1 text-xs font-semibold text-white dark:bg-white dark:text-black">
-                  {step.number}
+                <span className="text-sm font-medium text-stone-400 dark:text-stone-500">
+                  0{index + 1}
                 </span>
               </div>
 
-              <div className="phone-frame mx-auto w-full max-w-[270px] md:max-w-[290px]">
-                <div className="phone-screen bg-[radial-gradient(circle_at_top,_rgba(255,214,102,0.45),_transparent_55%),linear-gradient(180deg,#f3efe6_0%,#fffdf9_100%)] dark:bg-[radial-gradient(circle_at_top,_rgba(255,214,102,0.18),_transparent_55%),linear-gradient(180deg,#201d18_0%,#111111_100%)]">
-                  <Image
-                    src={step.image}
-                    alt={step.title}
-                    fill
-                    sizes="(max-width: 768px) 270px, 290px"
-                    className="object-contain p-1"
-                  />
-                </div>
+              <div className="image-stage grain h-[360px]">
+                <Image
+                  src={step.image}
+                  alt={step.title}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  className="object-cover"
+                />
               </div>
 
-              <h3 className="mt-6 text-xl font-semibold">{step.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-gray-600 dark:text-gray-400 md:text-base">
+              <h3 className="mt-6 text-3xl font-semibold tracking-[-0.02em]">{step.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-stone-600 dark:text-stone-400 md:text-base">
                 {step.description}
               </p>
             </article>
@@ -83,45 +133,66 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-gray-50 dark:bg-zinc-900/50 p-12 rounded-3xl">
-        <h2 className="text-3xl font-bold mb-12 text-center">Features</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm dark:border dark:border-zinc-800">
-            <h3 className="text-xl font-bold mb-3">AI Virtual Try-On</h3>
-            <p className="text-gray-600 dark:text-gray-400">Try on clothes instantly with our advanced AI technology.</p>
+      <section className="mt-24 rounded-[2.5rem] border border-black/6 bg-[linear-gradient(180deg,rgba(255,255,255,0.82)_0%,rgba(241,234,223,0.8)_100%)] p-8 dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(28,24,22,0.9)_0%,rgba(16,16,16,0.96)_100%)] md:p-12">
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+          <div className="max-w-2xl">
+            <span className="eyebrow">Core Value</span>
+            <h2 className="mt-6 text-4xl font-semibold tracking-[-0.03em] md:text-5xl">One product, one point of view.</h2>
           </div>
-          <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm dark:border dark:border-zinc-800">
-            <h3 className="text-xl font-bold mb-3">Outfit Generator</h3>
-            <p className="text-gray-600 dark:text-gray-400">Generate limitless outfit combinations.</p>
+          <p className="max-w-xl text-base leading-8 text-stone-600 dark:text-stone-400 md:text-lg">
+            Fitmixai is not just a generator. It is a cleaner decision-making tool for people trying to see themselves in new styles with more confidence.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="rounded-[1.8rem] border border-black/6 bg-white/72 p-6 dark:border-white/8 dark:bg-white/4">
+            <h3 className="text-2xl font-semibold">AI Virtual Try-On</h3>
+            <p className="mt-3 leading-7 text-stone-600 dark:text-stone-400">Try on clothes instantly with sharper proportions, better garment presence, and a more realistic preview of how pieces work together.</p>
           </div>
-          <div className="bg-white dark:bg-zinc-900 p-6 rounded-2xl shadow-sm dark:border dark:border-zinc-800">
-            <h3 className="text-xl font-bold mb-3">Style Discovery</h3>
-            <p className="text-gray-600 dark:text-gray-400">Explore trending fashion styles like casual, streetwear, formal.</p>
+          <div className="rounded-[1.8rem] border border-black/6 bg-white/72 p-6 dark:border-white/8 dark:bg-white/4">
+            <h3 className="text-2xl font-semibold">Outfit Generator</h3>
+            <p className="mt-3 leading-7 text-stone-600 dark:text-stone-400">Generate combinations that feel styled, not random, so users can move from inspiration to a concrete look faster.</p>
+          </div>
+          <div className="rounded-[1.8rem] border border-black/6 bg-white/72 p-6 dark:border-white/8 dark:bg-white/4">
+            <h3 className="text-2xl font-semibold">Style Discovery</h3>
+            <p className="mt-3 leading-7 text-stone-600 dark:text-stone-400">Explore casual, streetwear, formal, Korean, and minimalist directions inside one calmer and more premium interface.</p>
           </div>
         </div>
       </section>
 
-      <section>
-        <h2 className="text-3xl font-bold mb-12 text-center">Explore Styles</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {['Casual', 'Streetwear', 'Formal', 'Sport', 'Korean', 'Minimalist'].map(style => (
-            <a key={style} href={'/styles/' + style.toLowerCase()} className="group relative h-48 bg-gray-100 dark:bg-zinc-900 rounded-2xl overflow-hidden flex items-center justify-center hover:bg-gray-200 dark:hover:bg-zinc-800 dark:border dark:border-zinc-800 transition">
-              <span className="text-xl font-semibold group-hover:scale-110 transition">{style}</span>
-            </a>
+      <section className="mt-24">
+        <div className="flex items-end justify-between gap-6">
+          <div>
+            <span className="eyebrow">Style Index</span>
+            <h2 className="mt-6 text-4xl font-semibold tracking-[-0.03em] md:text-5xl">Explore styles with the same visual language.</h2>
+          </div>
+        </div>
+        <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3">
+          {['Casual', 'Streetwear', 'Formal', 'Sport', 'Korean', 'Minimalist'].map((style) => (
+            <Link key={style} href={`/styles/${style.toLowerCase()}`} className="group">
+              <div className="editorial-card rounded-[1.8rem] px-5 py-8 md:px-6 md:py-10">
+                <div className="mb-10 h-px bg-black/8 dark:bg-white/8" />
+                <span className="text-xs font-semibold uppercase tracking-[0.26em] text-stone-400 dark:text-stone-500">Style</span>
+                <h3 className="mt-3 text-3xl font-semibold tracking-[-0.03em] transition group-hover:text-amber-700 dark:group-hover:text-amber-300">{style}</h3>
+              </div>
+            </Link>
           ))}
         </div>
       </section>
 
-      <section className="max-w-3xl mx-auto">
-        <h2 className="text-3xl font-bold mb-8 text-center">FAQ</h2>
-        <div className="space-y-6">
-          <div className="pb-6 border-b dark:border-zinc-800">
-            <h3 className="text-lg font-semibold mb-2">What is AI virtual try-on?</h3>
-            <p className="text-gray-600 dark:text-gray-400">AI virtual try-on simulates how clothing would look on you based on a photo you upload.</p>
+      <section className="mx-auto mt-24 max-w-3xl">
+        <div className="text-center">
+          <span className="eyebrow">FAQ</span>
+          <h2 className="mt-6 text-4xl font-semibold tracking-[-0.03em] md:text-5xl">What users need to know first.</h2>
+        </div>
+        <div className="mt-12 space-y-6">
+          <div className="rounded-[1.8rem] border border-black/6 bg-white/74 p-7 dark:border-white/8 dark:bg-white/4">
+            <h3 className="text-2xl font-semibold">What is AI virtual try-on?</h3>
+            <p className="mt-3 leading-7 text-stone-600 dark:text-stone-400">AI virtual try-on simulates how clothing would look on you based on a photo you upload, giving a more intuitive preview before you commit to a style.</p>
           </div>
-          <div className="pb-6 border-b dark:border-zinc-800">
-            <h3 className="text-lg font-semibold mb-2">How does AI outfit generator work?</h3>
-            <p className="text-gray-600 dark:text-gray-400">Our generator creates complete, cohesive outfit combinations tailored to your aesthetic.</p>
+          <div className="rounded-[1.8rem] border border-black/6 bg-white/74 p-7 dark:border-white/8 dark:bg-white/4">
+            <h3 className="text-2xl font-semibold">How does AI outfit generator work?</h3>
+            <p className="mt-3 leading-7 text-stone-600 dark:text-stone-400">The generator builds complete outfits around your selected aesthetic so the result feels cohesive instead of pieced together manually.</p>
           </div>
         </div>
       </section>
