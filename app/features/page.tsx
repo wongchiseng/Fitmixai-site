@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Features - FitMixs',
-  description: 'Explore the powerful features of FitMixs. AI outfit generation, virtual try-on, and endless fashion styles.',
+  title: 'Features - Fitmixai',
+  description: 'Explore the powerful features of Fitmixai. AI outfit generation, virtual try-on, and endless fashion styles.',
 };
 
 export default function Features() {
@@ -17,7 +17,7 @@ export default function Features() {
     },
     {
       title: 'Outfit Combinations Maker',
-      desc: 'Have a jacket you love but do not know what pants match it? FitMixs generates entire coordinated outfits so you do not have to stress over styling combinations.',
+      desc: 'Have a jacket you love but do not know what pants match it? Fitmixai generates entire coordinated outfits so you do not have to stress over styling combinations.',
       icon: '👖',
     },
     {
@@ -32,7 +32,7 @@ export default function Features() {
       <div className="text-center mb-16">
         <h1 className="text-5xl font-bold mb-6">App Features</h1>
         <p className="text-xl text-gray-600 dark:text-gray-400 max-w-2xl text-justify mx-auto">
-          FitMixs combines cutting-edge AI with intuitive design to revolutionize how you interact with clothing.
+          Fitmixai combines cutting-edge AI with intuitive design to revolutionize how you interact with clothing.
         </p>
       </div>
 

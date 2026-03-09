@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Privacy Policy - FitMixs',
-  description: 'Privacy Policy and data security for FitMixs AI Virtual Try-On.',
+  title: 'Privacy Policy - Fitmixai',
+  description: 'Privacy Policy and data security for Fitmixai AI Virtual Try-On.',
 };
 
 export default function PrivacyPolicy() {
@@ -22,7 +22,7 @@ export default function PrivacyPolicy() {
       <p>Uploaded images are retained only as long as necessary to provide the service and are periodically deleted from our servers.</p>
 
       <h2>5. Contact</h2>
-      <p>If you have any questions about this Privacy Policy, please contact us at privacy@fitmixs.com.</p>
+      <p>If you have any questions about this Privacy Policy, please contact us at privacy@fitmixai.com.</p>
     </div>
   );
 }

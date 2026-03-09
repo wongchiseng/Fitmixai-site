@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Fashion Styles & AI Outfit Inspiration - FitMixs',
+  title: 'Fashion Styles & AI Outfit Inspiration - Fitmixai',
   description: 'Explore various fashion styles like Streetwear, Casual, Formal, and Korean. Generate outfits for any aesthetic with AI.',
 };
 

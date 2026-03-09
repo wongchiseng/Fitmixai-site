@@ -1,5 +1,5 @@
 export const metadata = {
-  title: '10 Best AI Outfit Generators in 2026 - FitMixs',
+  title: '10 Best AI Outfit Generators in 2026 - Fitmixai',
   description: 'Looking for the best AI outfit generator? We review the top 10 tools to generate clothing ideas, try on clothes virtually, and redesign your wardrobe.',
 };
 
@@ -18,9 +18,9 @@ export default function BlogPostOne() {
         Whether you are a busy professional trying to streamline your mornings, or a fashion enthusiast looking for fresh inspiration, an AI outfit generator acts as your personal stylist. It eliminates the guesswork matching colors, textures, and silhouettes.
       </p>
 
-      <h2>1. FitMixs</h2>
+      <h2>1. Fitmixai</h2>
       <p>
-        <strong>Overview:</strong> FitMixs leads the pack with its unparalleled virtual try-on engine and endless style discovery feed. 
+        <strong>Overview:</strong> Fitmixai leads the pack with its unparalleled virtual try-on engine and endless style discovery feed. 
       </p>
       <p>
         <strong>Key Features:</strong> 
@@ -31,7 +31,7 @@ export default function BlogPostOne() {
       <ul>
         <li><strong>Realism:</strong> The generated images shouldn't look like paper dolls. Look for diffusion-based real-time rendering.</li>
         <li><strong>Ease of Use:</strong> The interface should mimic discovering posts on Pinterest or Instagram.</li>
-        <li><strong>Privacy:</strong> Always ensure the platform respects your uploaded photos, like FitMixs does, guaranteeing temporary processing without retaining your facial data indefinitely.</li>
+        <li><strong>Privacy:</strong> Always ensure the platform respects your uploaded photos, like Fitmixai does, guaranteeing temporary processing without retaining your facial data indefinitely.</li>
       </ul>
 
       <p>

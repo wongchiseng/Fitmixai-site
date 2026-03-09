@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'How AI Virtual Try-On Actually Works - FitMixs',
+  title: 'How AI Virtual Try-On Actually Works - Fitmixai',
   description: 'Understand the cutting-edge generative AI and computer vision technology making virtual fitting rooms a reality today.',
 };
 
@@ -27,7 +27,7 @@ export default function BlogPostTwo() {
 
       <h2>Is it Perfect?</h2>
       <p>
-        While incredibly advanced, complex poses (like crossing your arms) or extremely loose, translucent fabrics still pose a challenge to generative models. However, for standard forward-facing poses, apps like FitMixs provide an accuracy rate so high that users can confidently visualize how an outfit will look in the physical world.
+        While incredibly advanced, complex poses (like crossing your arms) or extremely loose, translucent fabrics still pose a challenge to generative models. However, for standard forward-facing poses, apps like Fitmixai provide an accuracy rate so high that users can confidently visualize how an outfit will look in the physical world.
       </p>
 
       <h2>The Future</h2>

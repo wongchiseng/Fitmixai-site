@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Contact Us - FitMixs',
-  description: 'Get in touch with the FitMixs team for support, business inquiries, or general questions.',
+  title: 'Contact Us - Fitmixai',
+  description: 'Get in touch with the Fitmixai team for support, business inquiries, or general questions.',
 };
 
 export default function Contact() {
@@ -8,7 +8,7 @@ export default function Contact() {
     <div className="max-w-3xl mx-auto px-6 py-20 text-center">
       <h1 className="text-5xl font-bold mb-6">Contact Us</h1>
       <p className="text-xl text-gray-600 dark:text-gray-400 mb-12">
-        Have questions about FitMixs, need support, or want to explore partnership opportunities? We'd love to hear from you.
+        Have questions about Fitmixai, need support, or want to explore partnership opportunities? We'd love to hear from you.
       </p>
       
       <div className="bg-gray-50 dark:bg-zinc-900/50 border border-gray-100 dark:border-zinc-800 rounded-3xl p-12">

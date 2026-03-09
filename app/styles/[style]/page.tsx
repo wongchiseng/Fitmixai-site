@@ -4,7 +4,7 @@ export async function generateMetadata({ params }: { params: { style: string } }
   const styleRaw = params.style;
   const styleName = styleRaw.charAt(0).toUpperCase() + styleRaw.slice(1);
   return {
-    title: `${styleName} AI Outfit Generator - FitMixs`,
+    title: `${styleName} AI Outfit Generator - Fitmixai`,
     description: `Generate realistic ${styleName} outfits using AI. Discover ${styleName} fashion inspiration and virtually try on clothes.`,
   };
 }
@@ -37,7 +37,7 @@ export default function StylePage({ params }: { params: { style: string } }) {
         <p>This section explores the core elements, history, and key pieces that define the {styleName} aesthetic in modern fashion.</p>
         
         <h2>Why use AI for {styleName} outfits?</h2>
-        <p>Finding the perfect {styleName} pieces can be difficult. With the FitMixs AI Outfit Generator, you can mix and match different elements virtually before ever buying a real item.</p>
+        <p>Finding the perfect {styleName} pieces can be difficult. With the Fitmixai AI Outfit Generator, you can mix and match different elements virtually before ever buying a real item.</p>
       </div>
     </div>
   );

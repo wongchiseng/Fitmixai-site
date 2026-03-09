@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Blog - FitMixs AI Fashion Guides',
-  description: 'Read the latest styling guides, AI fashion news, and outfit generator tips from the FitMixs team.',
+  title: 'Blog - Fitmixai AI Fashion Guides',
+  description: 'Read the latest styling guides, AI fashion news, and outfit generator tips from the Fitmixai team.',
 };
 
 export default function Blog() {
@@ -21,7 +21,7 @@ export default function Blog() {
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-20">
-      <h1 className="text-5xl font-bold mb-12 text-center">FitMixs Journal</h1>
+      <h1 className="text-5xl font-bold mb-12 text-center">Fitmixai Journal</h1>
       
       <div className="grid gap-8">
         {posts.map(post => (
