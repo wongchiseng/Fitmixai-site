@@ -62,14 +62,14 @@ export default function Home() {
                 </span>
               </div>
 
-              <div className="phone-frame mx-auto w-full max-w-[220px]">
+              <div className="phone-frame mx-auto w-full max-w-[270px] md:max-w-[290px]">
                 <div className="phone-screen bg-[radial-gradient(circle_at_top,_rgba(255,214,102,0.45),_transparent_55%),linear-gradient(180deg,#f3efe6_0%,#fffdf9_100%)] dark:bg-[radial-gradient(circle_at_top,_rgba(255,214,102,0.18),_transparent_55%),linear-gradient(180deg,#201d18_0%,#111111_100%)]">
                   <Image
                     src={step.image}
                     alt={step.title}
                     fill
-                    sizes="(max-width: 768px) 220px, 220px"
-                    className="object-contain p-2"
+                    sizes="(max-width: 768px) 270px, 290px"
+                    className="object-contain p-1"
                   />
                 </div>
               </div>

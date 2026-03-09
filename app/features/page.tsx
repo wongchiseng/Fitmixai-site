@@ -46,28 +46,28 @@ export default function Features() {
           </p>
         </div>
 
-        <div className="relative min-h-[460px] rounded-[2rem] border border-black/5 bg-[linear-gradient(180deg,#f7f1e6_0%,#ffffff_100%)] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)] dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(41,35,25,0.7)_0%,rgba(12,12,12,1)_100%)]">
+        <div className="relative min-h-[520px] rounded-[2rem] border border-black/5 bg-[linear-gradient(180deg,#f7f1e6_0%,#ffffff_100%)] p-6 shadow-[0_24px_80px_rgba(0,0,0,0.08)] dark:border-white/10 dark:bg-[linear-gradient(180deg,rgba(41,35,25,0.7)_0%,rgba(12,12,12,1)_100%)]">
           <div className="absolute -top-4 right-5 rounded-full bg-black px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white dark:bg-white dark:text-black">
             Preview
           </div>
-          <div className="absolute left-4 top-10 w-[34%] max-w-[160px] rotate-[-10deg]">
+          <div className="absolute left-3 top-8 w-[35%] max-w-[190px] rotate-[-10deg]">
             <div className="phone-frame">
               <div className="phone-screen">
-                <Image src="/5.webp" alt="Fitmixai wardrobe screen" fill sizes="160px" className="object-contain p-2" />
+                <Image src="/5.webp" alt="Fitmixai wardrobe screen" fill sizes="190px" className="object-contain p-1" />
               </div>
             </div>
           </div>
-          <div className="absolute left-1/2 top-4 w-[42%] max-w-[210px] -translate-x-1/2">
+          <div className="absolute left-1/2 top-0 w-[45%] max-w-[250px] -translate-x-1/2">
             <div className="phone-frame shadow-[0_30px_70px_rgba(0,0,0,0.18)]">
               <div className="phone-screen">
-                <Image src="/13.webp" alt="Fitmixai generated result" fill sizes="210px" className="object-contain p-2" />
+                <Image src="/13.webp" alt="Fitmixai generated result" fill sizes="250px" className="object-contain p-1" />
               </div>
             </div>
           </div>
-          <div className="absolute bottom-6 right-4 w-[34%] max-w-[170px] rotate-[10deg]">
+          <div className="absolute bottom-4 right-3 w-[35%] max-w-[190px] rotate-[10deg]">
             <div className="phone-frame">
               <div className="phone-screen">
-                <Image src="/9.webp" alt="Fitmixai outfit browsing screen" fill sizes="170px" className="object-contain p-2" />
+                <Image src="/9.webp" alt="Fitmixai outfit browsing screen" fill sizes="190px" className="object-contain p-1" />
               </div>
             </div>
           </div>
@@ -77,24 +77,24 @@ export default function Features() {
       <div className="grid md:grid-cols-2 gap-8 lg:gap-10">
         {features.map((feature) => (
           <div key={feature.title} className="rounded-[2rem] border border-gray-100 bg-gray-50/80 p-6 dark:border-zinc-800 dark:bg-zinc-900/50 md:p-8">
-            <div className="mb-6 flex items-start justify-between gap-4">
-              <div>
+            <div className="mb-6 flex items-start justify-between gap-6">
+              <div className="max-w-[55%]">
                 <div className="text-4xl mb-4">{feature.icon}</div>
                 <h2 className="text-2xl font-bold mb-3">{feature.title}</h2>
               </div>
-              <div className="flex -space-x-4">
+              <div className="flex shrink-0 items-start -space-x-5">
                 {feature.images.map((image, index) => (
                   <div
                     key={image}
-                    className={`phone-frame w-[86px] ${index === 1 ? 'translate-y-5' : ''}`}
+                    className={`phone-frame w-[112px] md:w-[126px] ${index === 1 ? 'translate-y-6' : ''}`}
                   >
                     <div className="phone-screen">
                       <Image
                         src={image}
                         alt={`${feature.title} preview ${index + 1}`}
                         fill
-                        sizes="86px"
-                        className="object-contain p-1.5"
+                        sizes="(max-width: 768px) 112px, 126px"
+                        className="object-contain p-1"
                       />
                     </div>
                   </div>

@@ -27,9 +27,9 @@ body {
 
 .phone-frame {
   position: relative;
-  aspect-ratio: 9 / 19;
+  aspect-ratio: 45 / 101;
   border-radius: 2rem;
-  padding: 0.5rem;
+  padding: 0.42rem;
   background: linear-gradient(180deg, #1c1c1c 0%, #050505 100%);
   box-shadow: 0 18px 50px rgba(15, 23, 42, 0.18);
 }
@@ -39,7 +39,7 @@ body {
   height: 100%;
   width: 100%;
   overflow: hidden;
-  border-radius: 1.55rem;
+  border-radius: 1.6rem;
   background: linear-gradient(180deg, #f8f2e9 0%, #fffdfa 100%);
 }
 
@@ -47,10 +47,10 @@ body {
   content: "";
   position: absolute;
   left: 50%;
-  top: 0.55rem;
+  top: 0.5rem;
   z-index: 2;
-  height: 0.38rem;
-  width: 30%;
+  height: 0.34rem;
+  width: 32%;
   transform: translateX(-50%);
   border-radius: 9999px;
   background: rgba(0, 0, 0, 0.72);
