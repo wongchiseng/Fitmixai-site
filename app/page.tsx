@@ -1,3 +1,26 @@
+import Image from 'next/image';
+
+const steps = [
+  {
+    image: '/1.webp',
+    title: 'Upload your photo',
+    description: 'Start with a clean portrait. Fitmixai uses it as the base for every outfit preview.',
+    number: '01',
+  },
+  {
+    image: '/2.webp',
+    title: 'Choose clothing style',
+    description: 'Browse styles, select pieces, and shape the aesthetic you want to explore.',
+    number: '02',
+  },
+  {
+    image: '/3.webp',
+    title: 'AI generates outfit',
+    description: 'Receive a polished try-on result that feels closer to a real product preview.',
+    number: '03',
+  },
+];
+
 export default function Home() {
   return (
     <div className="max-w-7xl mx-auto px-6 py-12 space-y-32">
@@ -16,33 +39,47 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="text-center">
-        <h2 className="text-3xl font-bold mb-12">How it Works</h2>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="p-6">
-            <div className="relative aspect-[9/16] w-full max-w-[240px] mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-zinc-800">
-              <img src="/1.webp" alt="Upload photo step" className="object-cover w-full h-full" />
-              <div className="absolute top-4 left-4 bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">1</div>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Upload your photo</h3>
-            <p className="text-gray-600 dark:text-gray-400">Snap a quick photo or choose one from your gallery.</p>
-          </div>
-          <div className="p-6">
-            <div className="relative aspect-[9/16] w-full max-w-[240px] mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-zinc-800">
-              <img src="/2.webp" alt="Choose style step" className="object-cover w-full h-full" />
-              <div className="absolute top-4 left-4 bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">2</div>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">Choose clothing style</h3>
-            <p className="text-gray-600 dark:text-gray-400">Select from streetwear, casual, formal, and more.</p>
-          </div>
-          <div className="p-6">
-            <div className="relative aspect-[9/16] w-full max-w-[240px] mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-zinc-800">
-              <img src="/3.webp" alt="AI generate step" className="object-cover w-full h-full" />
-              <div className="absolute top-4 left-4 bg-black text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shadow-md">3</div>
-            </div>
-            <h3 className="text-xl font-semibold mb-2">AI generates outfit</h3>
-            <p className="text-gray-600 dark:text-gray-400">See your new look instantly styled by AI.</p>
-          </div>
+      <section className="rounded-[2rem] bg-[linear-gradient(180deg,#f8f5ef_0%,#ffffff_100%)] px-6 py-16 dark:bg-[linear-gradient(180deg,rgba(37,35,31,0.9)_0%,rgba(10,10,10,1)_100%)] md:px-10">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-bold md:text-4xl">How it Works</h2>
+          <p className="mt-4 text-base text-gray-600 dark:text-gray-400 md:text-lg">
+            A simple three-step flow, presented like a product walkthrough instead of three disconnected screenshots.
+          </p>
+        </div>
+
+        <div className="mt-12 grid gap-8 md:grid-cols-3">
+          {steps.map((step) => (
+            <article
+              key={step.number}
+              className="rounded-[2rem] border border-black/5 bg-white/85 p-5 text-center shadow-[0_20px_60px_rgba(0,0,0,0.06)] backdrop-blur dark:border-white/10 dark:bg-zinc-950/75"
+            >
+              <div className="mb-6 flex items-center justify-between text-left">
+                <span className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-700 dark:text-amber-300">
+                  Step {step.number}
+                </span>
+                <span className="rounded-full bg-black px-3 py-1 text-xs font-semibold text-white dark:bg-white dark:text-black">
+                  {step.number}
+                </span>
+              </div>
+
+              <div className="phone-frame mx-auto w-full max-w-[220px]">
+                <div className="phone-screen bg-[radial-gradient(circle_at_top,_rgba(255,214,102,0.45),_transparent_55%),linear-gradient(180deg,#f3efe6_0%,#fffdf9_100%)] dark:bg-[radial-gradient(circle_at_top,_rgba(255,214,102,0.18),_transparent_55%),linear-gradient(180deg,#201d18_0%,#111111_100%)]">
+                  <Image
+                    src={step.image}
+                    alt={step.title}
+                    fill
+                    sizes="(max-width: 768px) 220px, 220px"
+                    className="object-contain p-2"
+                  />
+                </div>
+              </div>
+
+              <h3 className="mt-6 text-xl font-semibold">{step.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-gray-600 dark:text-gray-400 md:text-base">
+                {step.description}
+              </p>
+            </article>
+          ))}
         </div>
       </section>
 
