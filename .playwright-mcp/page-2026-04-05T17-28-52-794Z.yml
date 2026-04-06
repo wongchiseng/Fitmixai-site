@@ -1,0 +1,119 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "Fitmixai" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e5]:
+        - link "Features" [ref=e6] [cursor=pointer]:
+          - /url: /features
+        - link "Styles" [ref=e7] [cursor=pointer]:
+          - /url: /styles
+        - link "Blog" [ref=e8] [cursor=pointer]:
+          - /url: /blog
+        - link "About" [ref=e9] [cursor=pointer]:
+          - /url: /about
+        - link "Contact" [ref=e10] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e11]:
+    - generic [ref=e12]:
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]: Product Tour
+          - heading "Features presented as a system, not a list of widgets." [level=1] [ref=e18]
+          - paragraph [ref=e19]: Fitmixai brings outfit generation, style discovery, and polished rendering into one calmer flow. The page now reads like a product narrative instead of stitched screenshots.
+        - generic [ref=e20]:
+          - article [ref=e21]:
+            - img "Fitmixai generated result" [ref=e23]
+          - article [ref=e24]:
+            - img "Fitmixai wardrobe screen" [ref=e26]
+          - article [ref=e27]:
+            - img "Fitmixai outfit browsing screen" [ref=e29]
+      - generic [ref=e30]:
+        - article [ref=e31]:
+          - generic [ref=e32]:
+            - generic [ref=e33]:
+              - text: Fit Preview
+              - heading "AI Virtual Try-On" [level=2] [ref=e34]
+            - generic [ref=e35]:
+              - img "AI Virtual Try-On preview 1" [ref=e37]
+              - img "AI Virtual Try-On preview 2" [ref=e39]
+          - paragraph [ref=e40]: Upload a simple forward-facing photo of yourself, and our AI will seamlessly wrap different garments onto your body. It respects your unique shape, pose, and lighting to give you a realistic preview.
+        - article [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]:
+              - text: Taste Mapping
+              - heading "Endless Style Discovery" [level=2] [ref=e44]
+            - generic [ref=e45]:
+              - img "Endless Style Discovery preview 1" [ref=e47]
+              - img "Endless Style Discovery preview 2" [ref=e49]
+          - paragraph [ref=e50]: Not sure what your aesthetic is? Swipe through endless style feeds ranging from Streetwear and Minimalist to Korean and Formal. Mark your favorites to let our AI learn your taste.
+        - article [ref=e51]:
+          - generic [ref=e52]:
+            - generic [ref=e53]:
+              - text: Look Building
+              - heading "Outfit Combinations Maker" [level=2] [ref=e54]
+            - generic [ref=e55]:
+              - img "Outfit Combinations Maker preview 1" [ref=e57]
+              - img "Outfit Combinations Maker preview 2" [ref=e59]
+          - paragraph [ref=e60]: Have a jacket you love but do not know what pants match it? Fitmixai generates entire coordinated outfits so you do not have to stress over styling combinations.
+        - article [ref=e61]:
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - text: Render Quality
+              - heading "High-Quality Renderings" [level=2] [ref=e64]
+            - generic [ref=e65]:
+              - img "High-Quality Renderings preview 1" [ref=e67]
+              - img "High-Quality Renderings preview 2" [ref=e69]
+          - paragraph [ref=e70]: Say goodbye to floating heads and awkward 2D cutouts. Our advanced diffusion models generate high-fidelity realism so the clothes naturally drape and fold as they would in real life.
+      - generic [ref=e72]:
+        - generic [ref=e73]:
+          - generic [ref=e74]: Launch Direction
+          - heading "Ready to present Fitmixai as a finished product, not just a concept?" [level=2] [ref=e75]
+          - paragraph [ref=e76]: "The CTA is now aligned with the rest of the site: warmer, sharper, and more brand-led. No isolated blue block, no off-system interaction style."
+        - generic [ref=e77]:
+          - link "Get in Touch" [ref=e78] [cursor=pointer]:
+            - /url: /contact
+          - paragraph [ref=e79]: For product questions, partnerships, or an early look at development progress.
+  - contentinfo [ref=e80]:
+    - generic [ref=e81]:
+      - generic [ref=e82]:
+        - generic [ref=e83]:
+          - link "Fitmixai" [ref=e84] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=e85]: AI Outfit Generator & Virtual Try-On. One portrait, endless possibilities.
+        - generic [ref=e86]:
+          - heading "Product" [level=4] [ref=e87]
+          - list [ref=e88]:
+            - listitem [ref=e89]:
+              - link "Features" [ref=e90] [cursor=pointer]:
+                - /url: /features
+            - listitem [ref=e91]:
+              - link "Styles" [ref=e92] [cursor=pointer]:
+                - /url: /styles
+            - listitem [ref=e93]:
+              - link "Blog" [ref=e94] [cursor=pointer]:
+                - /url: /blog
+        - generic [ref=e95]:
+          - heading "Company" [level=4] [ref=e96]
+          - list [ref=e97]:
+            - listitem [ref=e98]:
+              - link "About" [ref=e99] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e100]:
+              - link "Contact" [ref=e101] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e102]:
+          - heading "Legal" [level=4] [ref=e103]
+          - list [ref=e104]:
+            - listitem [ref=e105]:
+              - link "Privacy Policy" [ref=e106] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=e107]:
+              - link "Terms of Service" [ref=e108] [cursor=pointer]:
+                - /url: /terms
+      - generic [ref=e109]:
+        - generic [ref=e110]: © 2026 Fitmixai. All rights reserved.
+        - generic [ref=e111]: Built with AI, for fashion.
+  - button "Open Next.js Dev Tools" [ref=e117] [cursor=pointer]:
+    - img [ref=e118]
+  - alert [ref=e121]

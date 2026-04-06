@@ -1,0 +1,197 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - navigation [ref=e3]:
+      - link "Fitmixai" [ref=e4] [cursor=pointer]:
+        - /url: /
+      - generic [ref=e5]:
+        - link "Features" [ref=e6] [cursor=pointer]:
+          - /url: /features
+        - link "Styles" [ref=e7] [cursor=pointer]:
+          - /url: /styles
+        - link "Blog" [ref=e8] [cursor=pointer]:
+          - /url: /blog
+        - link "About" [ref=e9] [cursor=pointer]:
+          - /url: /about
+        - link "Contact" [ref=e10] [cursor=pointer]:
+          - /url: /contact
+  - main [ref=e11]:
+    - generic [ref=e12]:
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]: AI Styling Studio
+          - heading "AI Outfit Generator and virtual try-on, designed like a finished product." [level=1] [ref=e18]
+          - paragraph [ref=e19]: "Fitmixai turns one portrait into a sharper styling workflow: discover looks, test garments, and generate polished outfit previews with a coherent visual system."
+          - generic [ref=e20]:
+            - link "Explore Features" [ref=e21] [cursor=pointer]:
+              - /url: /features
+            - link "Talk to Us" [ref=e22] [cursor=pointer]:
+              - /url: /contact
+        - generic [ref=e23]:
+          - article [ref=e24]:
+            - img "Fitmixai generated fashion preview" [ref=e26]
+          - article [ref=e27]:
+            - img "Fitmixai wardrobe browsing interface" [ref=e29]
+          - article [ref=e30]:
+            - img "Fitmixai outfit combination screen" [ref=e32]
+      - generic [ref=e33]:
+        - generic [ref=e34]:
+          - paragraph [ref=e35]: 6+
+          - paragraph [ref=e36]: Style Directions
+        - generic [ref=e37]:
+          - paragraph [ref=e38]: 10K+
+          - paragraph [ref=e39]: Outfits Generated
+        - generic [ref=e40]:
+          - paragraph [ref=e41]: < 10s
+          - paragraph [ref=e42]: Generation Time
+        - generic [ref=e43]:
+          - paragraph [ref=e44]: 100%
+          - paragraph [ref=e45]: AI Powered
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]: How It Works
+          - heading "Three screens, one visual story." [level=2] [ref=e49]
+          - paragraph [ref=e50]: Each step has a clear role in the journey — no filler, no fake device frames.
+        - generic [ref=e51]:
+          - article [ref=e52]:
+            - generic [ref=e53]:
+              - generic [ref=e54]: Step 01
+              - generic [ref=e55]: "01"
+            - img "Upload your photo" [ref=e57]
+            - heading "Upload your photo" [level=3] [ref=e58]
+            - paragraph [ref=e59]: Start with a clean portrait. Fitmixai uses it as the base for every outfit preview.
+          - article [ref=e60]:
+            - generic [ref=e61]:
+              - generic [ref=e62]: Step 02
+              - generic [ref=e63]: "02"
+            - img "Choose clothing style" [ref=e65]
+            - heading "Choose clothing style" [level=3] [ref=e66]
+            - paragraph [ref=e67]: Browse styles, select pieces, and shape the aesthetic you want to explore.
+          - article [ref=e68]:
+            - generic [ref=e69]:
+              - generic [ref=e70]: Step 03
+              - generic [ref=e71]: "03"
+            - img "AI generates outfit" [ref=e73]
+            - heading "AI generates outfit" [level=3] [ref=e74]
+            - paragraph [ref=e75]: Receive a polished try-on result that feels closer to a real product preview.
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]:
+            - generic [ref=e79]: Core Value
+            - heading "One product, one point of view." [level=2] [ref=e80]
+          - paragraph [ref=e81]: Fitmixai is not just a generator. It is a cleaner decision-making tool for people trying to see themselves in new styles with more confidence.
+        - generic [ref=e82]:
+          - generic [ref=e83]:
+            - heading "AI Virtual Try-On" [level=3] [ref=e84]
+            - paragraph [ref=e85]: Try on clothes instantly with sharper proportions, better garment presence, and a more realistic preview of how pieces work together.
+          - generic [ref=e86]:
+            - heading "Outfit Generator" [level=3] [ref=e87]
+            - paragraph [ref=e88]: Generate combinations that feel styled, not random, so users can move from inspiration to a concrete look faster.
+          - generic [ref=e89]:
+            - heading "Style Discovery" [level=3] [ref=e90]
+            - paragraph [ref=e91]: Explore casual, streetwear, formal, Korean, and minimalist directions inside one calmer and more premium interface.
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - generic [ref=e94]:
+            - generic [ref=e95]: Style Index
+            - heading "Explore styles with the same visual language." [level=2] [ref=e96]
+          - link "View All →" [ref=e97] [cursor=pointer]:
+            - /url: /styles
+        - generic [ref=e98]:
+          - link "Style Casual" [ref=e99] [cursor=pointer]:
+            - /url: /styles/casual
+            - generic [ref=e100]:
+              - text: Style
+              - heading "Casual" [level=3] [ref=e102]
+          - link "Style Streetwear" [ref=e103] [cursor=pointer]:
+            - /url: /styles/streetwear
+            - generic [ref=e104]:
+              - text: Style
+              - heading "Streetwear" [level=3] [ref=e106]
+          - link "Style Formal" [ref=e107] [cursor=pointer]:
+            - /url: /styles/formal
+            - generic [ref=e108]:
+              - text: Style
+              - heading "Formal" [level=3] [ref=e110]
+          - link "Style Sport" [ref=e111] [cursor=pointer]:
+            - /url: /styles/sport
+            - generic [ref=e112]:
+              - text: Style
+              - heading "Sport" [level=3] [ref=e114]
+          - link "Style Korean" [ref=e115] [cursor=pointer]:
+            - /url: /styles/korean
+            - generic [ref=e116]:
+              - text: Style
+              - heading "Korean" [level=3] [ref=e118]
+          - link "Style Minimalist" [ref=e119] [cursor=pointer]:
+            - /url: /styles/minimalist
+            - generic [ref=e120]:
+              - text: Style
+              - heading "Minimalist" [level=3] [ref=e122]
+      - generic [ref=e123]:
+        - generic [ref=e124]:
+          - generic [ref=e125]: FAQ
+          - heading "What users need to know first." [level=2] [ref=e126]
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - heading "What is AI virtual try-on?" [level=3] [ref=e129]
+            - paragraph [ref=e130]: AI virtual try-on simulates how clothing would look on you based on a photo you upload, giving a more intuitive preview before you commit to a style.
+          - generic [ref=e131]:
+            - heading "How does the AI outfit generator work?" [level=3] [ref=e132]
+            - paragraph [ref=e133]: The generator builds complete outfits around your selected aesthetic so the result feels cohesive instead of assembled manually.
+          - generic [ref=e134]:
+            - heading "Do I need a professional photo?" [level=3] [ref=e135]
+            - paragraph [ref=e136]: No. A clear, forward-facing portrait taken on any modern phone works well. The AI adapts to natural lighting and everyday backgrounds.
+          - generic [ref=e137]:
+            - heading "Are my photos stored or shared?" [level=3] [ref=e138]
+            - paragraph [ref=e139]: Photos are processed temporarily to generate your preview and are not used to train public models or shared with third parties.
+      - generic [ref=e140]:
+        - generic [ref=e141]: Get Started
+        - heading "Ready to see yourself differently?" [level=2] [ref=e142]
+        - paragraph [ref=e143]: Upload one photo. Discover six style directions. Let the AI do the rest.
+        - generic [ref=e144]:
+          - link "See Features" [ref=e145] [cursor=pointer]:
+            - /url: /features
+          - link "Contact Us" [ref=e146] [cursor=pointer]:
+            - /url: /contact
+  - contentinfo [ref=e147]:
+    - generic [ref=e148]:
+      - generic [ref=e149]:
+        - generic [ref=e150]:
+          - link "Fitmixai" [ref=e151] [cursor=pointer]:
+            - /url: /
+          - paragraph [ref=e152]: AI Outfit Generator & Virtual Try-On. One portrait, endless possibilities.
+        - generic [ref=e153]:
+          - heading "Product" [level=4] [ref=e154]
+          - list [ref=e155]:
+            - listitem [ref=e156]:
+              - link "Features" [ref=e157] [cursor=pointer]:
+                - /url: /features
+            - listitem [ref=e158]:
+              - link "Styles" [ref=e159] [cursor=pointer]:
+                - /url: /styles
+            - listitem [ref=e160]:
+              - link "Blog" [ref=e161] [cursor=pointer]:
+                - /url: /blog
+        - generic [ref=e162]:
+          - heading "Company" [level=4] [ref=e163]
+          - list [ref=e164]:
+            - listitem [ref=e165]:
+              - link "About" [ref=e166] [cursor=pointer]:
+                - /url: /about
+            - listitem [ref=e167]:
+              - link "Contact" [ref=e168] [cursor=pointer]:
+                - /url: /contact
+        - generic [ref=e169]:
+          - heading "Legal" [level=4] [ref=e170]
+          - list [ref=e171]:
+            - listitem [ref=e172]:
+              - link "Privacy Policy" [ref=e173] [cursor=pointer]:
+                - /url: /privacy
+            - listitem [ref=e174]:
+              - link "Terms of Service" [ref=e175] [cursor=pointer]:
+                - /url: /terms
+      - generic [ref=e176]:
+        - generic [ref=e177]: © 2026 Fitmixai. All rights reserved.
+        - generic [ref=e178]: Built with AI, for fashion.
+  - button "Open Next.js Dev Tools" [ref=e184] [cursor=pointer]:
+    - img [ref=e185]

@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 export const metadata = {
   title: 'How AI Virtual Try-On Actually Works - Fitmixai',
   description: 'Understand the cutting-edge generative AI and computer vision technology making virtual fitting rooms a reality today.',
@@ -5,10 +7,17 @@ export const metadata = {
 
 export default function BlogPostTwo() {
   return (
-    <article className="max-w-3xl mx-auto px-6 py-20 prose prose-lg prose-blue dark:prose-invert text-justify">
-      <p className="text-gray-500 dark:text-gray-400 mb-2">March 1, 2026</p>
-      <h1>How AI Virtual Try-On Actually Works</h1>
-      
+    <article className="mx-auto max-w-3xl px-6 py-16 md:py-20">
+      <Link
+        href="/blog"
+        className="mb-10 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em] text-stone-500 transition hover:text-amber-700 dark:text-stone-400 dark:hover:text-amber-300"
+      >
+        ← Journal
+      </Link>
+      <p className="text-xs font-semibold uppercase tracking-[0.22em] text-amber-700 dark:text-amber-300">March 1, 2026 · Technology</p>
+      <h1 className="mt-4 font-display text-4xl font-semibold leading-tight tracking-[-0.03em] md:text-5xl">How AI Virtual Try-On Actually Works</h1>
+
+      <div className="prose prose-lg prose-stone mt-10 dark:prose-invert">
       <p>
         A few years ago, "virtual try-on" meant taking a flat PNG of a t-shirt and dragging it over a photo of yourself. The proportions were wrong, the shadows didn't make sense, and the fabric didn't respect human anatomy. Today, the technology is nearly indistinguishable from reality. 
       </p>
@@ -34,6 +43,7 @@ export default function BlogPostTwo() {
       <p>
         As models become faster, we anticipate real-time video virtual try-on becoming the standard. For now, high-quality image generation remains the most powerful tool for exploring your style boundaries!
       </p>
+      </div>
     </article>
   );
 }

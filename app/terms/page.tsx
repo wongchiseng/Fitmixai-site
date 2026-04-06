@@ -5,7 +5,8 @@ export const metadata = {
 
 export default function TermsOfService() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-12 prose prose-blue dark:prose-invert text-justify">
+    <div className="mx-auto max-w-3xl px-6 py-16 md:py-20">
+      <div className="prose prose-stone dark:prose-invert">
       <h1>Terms of Service</h1>
       <p>Last updated: {new Date().toLocaleDateString()}</p>
       
@@ -23,6 +24,7 @@ export default function TermsOfService() {
 
       <h2>5. Termination</h2>
       <p>We may terminate or suspend your access to our service immediately, without prior notice or liability, for any reason whatsoever.</p>
+      </div>
     </div>
   );
 }

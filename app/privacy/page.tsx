@@ -5,7 +5,8 @@ export const metadata = {
 
 export default function PrivacyPolicy() {
   return (
-    <div className="max-w-3xl mx-auto px-6 py-12 prose prose-blue dark:prose-invert text-justify">
+    <div className="mx-auto max-w-3xl px-6 py-16 md:py-20">
+      <div className="prose prose-stone dark:prose-invert">
       <h1>Privacy Policy</h1>
       <p>Last updated: {new Date().toLocaleDateString()}</p>
       
@@ -23,6 +24,7 @@ export default function PrivacyPolicy() {
 
       <h2>5. Contact</h2>
       <p>If you have any questions about this Privacy Policy, please contact us at privacy@fitmixai.com.</p>
+      </div>
     </div>
   );
 }

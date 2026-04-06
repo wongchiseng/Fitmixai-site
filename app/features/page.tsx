@@ -49,57 +49,58 @@ export default function Features() {
             </p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-[0.78fr_1fr] md:grid-rows-[1fr_1fr]">
-            <article className="editorial-card grain rounded-[2rem] p-3 md:row-span-2">
-              <div className="image-stage h-[440px] md:h-full">
-                <Image src="/13.webp" alt="Fitmixai generated result" fill sizes="(max-width: 768px) 100vw, 420px" className="object-cover" />
+          <div className="relative h-[380px] w-full md:h-[500px] mt-10 md:mt-0 flex items-center justify-end md:-mr-10">
+            <div className="relative h-full w-[55%] md:w-[50%] z-10">
+              <Image src="/13.webp" alt="Fitmixai generated result" fill sizes="(max-width: 768px) 100vw, 420px" className="object-contain object-right" priority />
+            </div>
+            <div className="relative flex flex-col justify-center gap-6 h-full w-[45%] z-0 -translate-x-2 md:-translate-x-4">
+              <div className="relative h-[30%] w-full">
+                <Image src="/5.webp" alt="Fitmixai wardrobe screen" fill sizes="(max-width: 768px) 100vw, 320px" className="object-contain object-left-bottom" />
               </div>
-            </article>
-            <article className="editorial-card grain rounded-[2rem] p-3">
-              <div className="image-stage h-[210px]">
-                <Image src="/5.webp" alt="Fitmixai wardrobe screen" fill sizes="(max-width: 768px) 100vw, 320px" className="object-cover" />
+              <div className="relative h-[45%] w-full">
+                <Image src="/9.webp" alt="Fitmixai outfit browsing screen" fill sizes="(max-width: 768px) 100vw, 320px" className="object-contain object-left-top" />
               </div>
-            </article>
-            <article className="editorial-card grain rounded-[2rem] p-3 md:translate-x-8">
-              <div className="image-stage h-[210px]">
-                <Image src="/9.webp" alt="Fitmixai outfit browsing screen" fill sizes="(max-width: 768px) 100vw, 320px" className="object-cover" />
-              </div>
-            </article>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="mt-20 grid gap-8 md:grid-cols-2 lg:gap-10">
         {features.map((feature) => (
-          <article key={feature.title} className="editorial-card rounded-[2rem] p-5 md:p-6">
-            <div className="mb-6 flex items-start justify-between gap-6">
-              <div className="max-w-[52%]">
-                <span className="text-xs font-semibold uppercase tracking-[0.26em] text-amber-700 dark:text-amber-300">
-                  {feature.eyebrow}
-                </span>
-                <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em]">{feature.title}</h2>
-              </div>
-              <div className="grid shrink-0 grid-cols-2 gap-3">
+          <article key={feature.title} className="relative flex flex-col justify-between rounded-[2.5rem] border border-black/5 bg-white p-7 pb-0 shadow-sm dark:border-white/8 dark:bg-white/4 md:p-9 md:pb-0">
+            <div className="relative z-10 w-full md:pr-10">
+              <span className="text-xs font-semibold uppercase tracking-[0.26em] text-amber-700 dark:text-amber-300">
+                {feature.eyebrow}
+              </span>
+              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.03em]">{feature.title}</h2>
+            </div>
+            
+            <div className="relative mt-8 flex flex-col items-center justify-between gap-6 sm:flex-row sm:items-end">
+              <p className="max-w-xs text-sm leading-7 text-stone-600 dark:text-stone-400 sm:mb-8 sm:max-w-[45%]">
+                {feature.desc}
+              </p>
+              
+              <div className="relative flex h-[240px] w-full shrink-0 items-end justify-end gap-2 sm:-mr-4 sm:h-[320px] sm:w-[50%]">
                 {feature.images.map((image, index) => (
                   <div
                     key={image}
-                    className={`image-stage grain h-[150px] w-[108px] overflow-hidden rounded-[1.5rem] md:h-[180px] md:w-[132px] ${index === 1 ? 'translate-y-5' : ''}`}
+                    className={`relative flex-shrink-0 touch-none ${
+                        index === 1 
+                          ? 'h-[200px] w-[105px] translate-y-3 sm:h-[280px] sm:w-[145px] sm:translate-y-5' 
+                          : 'h-[240px] w-[125px] sm:h-[320px] sm:w-[165px]'
+                    }`}
                   >
                     <Image
                       src={image}
                       alt={`${feature.title} preview ${index + 1}`}
                       fill
-                      sizes="(max-width: 768px) 108px, 132px"
-                      className="object-cover"
+                      sizes="(max-width: 768px) 125px, 165px"
+                      className="object-contain object-bottom"
                     />
                   </div>
                 ))}
               </div>
             </div>
-
-            <p className="leading-8 text-stone-600 dark:text-stone-400">
-              {feature.desc}
-            </p>
           </article>
         ))}
       </section>
