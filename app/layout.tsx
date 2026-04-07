@@ -43,6 +43,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        {/* Material Symbols – loaded via <link> so Next.js PostCSS doesn't strip the ligature settings */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        />
+      </head>
       <body className={`${manrope.variable} ${notoSerif.variable}`}>
         {/* Top Nav */}
         <nav className="sticky top-0 w-full z-50 glass-nav shadow-[0_12px_40px_rgba(43,52,55,0.06)]">
