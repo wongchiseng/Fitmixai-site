@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, Manrope } from 'next/font/google';
+import { Manrope, Noto_Serif } from 'next/font/google';
 import Link from 'next/link';
 import './globals.css';
 
@@ -8,10 +8,11 @@ const manrope = Manrope({
   variable: '--font-sans',
 });
 
-const cormorant = Cormorant_Garamond({
+const notoSerif = Noto_Serif({
   subsets: ['latin'],
   variable: '--font-display',
-  weight: ['500', '600', '700'],
+  weight: ['400', '700'],
+  style: ['normal', 'italic'],
 });
 
 export const metadata: Metadata = {
@@ -42,62 +43,44 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${manrope.variable} ${cormorant.variable}`}>
-        <header className="sticky top-0 z-50 border-b border-black/5 bg-[rgba(247,242,234,0.82)] px-6 [-webkit-backdrop-filter:blur(14px)] [backdrop-filter:blur(14px)] dark:border-white/6 dark:bg-[rgba(18,16,15,0.82)]">
-          <nav className="mx-auto flex max-w-7xl items-center justify-between py-4 text-[15px] dark:text-stone-100">
-            <Link href="/" className="font-display text-2xl font-semibold uppercase tracking-[0.08em] transition-opacity hover:opacity-70">
+      <body className={`${manrope.variable} ${notoSerif.variable}`}>
+        {/* Top Nav */}
+        <nav className="sticky top-0 w-full z-50 glass-nav shadow-[0_12px_40px_rgba(43,52,55,0.06)]">
+          <div className="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+            <Link href="/" className="text-2xl font-serif italic text-on-background transition-opacity hover:opacity-70">
               Fitmixai
             </Link>
-            <div className="flex items-center gap-1 text-sm uppercase tracking-[0.2em] text-stone-600 dark:text-stone-400">
-              <Link href="/features" className="site-link rounded-full px-4 py-2 transition hover:bg-black/5 dark:hover:bg-white/6">Features</Link>
-              <Link href="/styles" className="site-link rounded-full px-4 py-2 transition hover:bg-black/5 dark:hover:bg-white/6">Styles</Link>
-              <Link href="/blog" className="site-link rounded-full px-4 py-2 transition hover:bg-black/5 dark:hover:bg-white/6">Blog</Link>
-              <Link href="/about" className="site-link hidden rounded-full px-4 py-2 transition hover:bg-black/5 dark:hover:bg-white/6 md:block">About</Link>
-              <Link
-                href="/contact"
-                className="ml-3 rounded-full bg-stone-950 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.22em] text-stone-50 transition hover:bg-stone-700 dark:bg-stone-50 dark:text-stone-950 dark:hover:bg-stone-200"
-              >
-                Contact
-              </Link>
+            <div className="hidden md:flex items-center gap-8">
+              <Link href="/features" className="site-link text-on-surface-variant font-semibold text-xs tracking-widest uppercase transition-colors">Features</Link>
+              <Link href="/styles" className="site-link text-on-surface-variant font-semibold text-xs tracking-widest uppercase transition-colors">Styles</Link>
+              <Link href="/blog" className="site-link text-on-surface-variant font-semibold text-xs tracking-widest uppercase transition-colors">Blog</Link>
+              <Link href="/about" className="site-link hidden lg:block text-on-surface-variant font-semibold text-xs tracking-widest uppercase transition-colors">About</Link>
             </div>
-          </nav>
-        </header>
+            <Link
+              href="/contact"
+              className="bg-gradient-to-br from-primary to-primary-dim text-on-primary px-7 py-3 rounded-full text-xs font-semibold tracking-widest uppercase hover:opacity-80 transition-all duration-300 active:scale-95"
+            >
+              Contact
+            </Link>
+          </div>
+        </nav>
+
         <main className="min-h-screen">{children}</main>
-        <footer className="mt-24 border-t border-black/6 bg-[linear-gradient(180deg,rgba(243,237,228,0.52)_0%,rgba(255,255,255,0.9)_100%)] py-14 dark:border-white/8 dark:bg-[linear-gradient(180deg,rgba(33,30,28,0.94)_0%,rgba(10,10,10,0.98)_100%)]">
-          <div className="mx-auto max-w-7xl px-6">
-            <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
-              <div className="col-span-2 md:col-span-1">
-                <Link href="/" className="font-display text-2xl font-semibold uppercase tracking-[0.08em]">Fitmixai</Link>
-                <p className="mt-3 max-w-xs text-sm leading-6 text-stone-500 dark:text-stone-400">
-                  AI Outfit Generator &amp; Virtual Try-On. One portrait, endless possibilities.
-                </p>
-              </div>
-              <div>
-                <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-stone-400 dark:text-stone-500">Product</h4>
-                <ul className="space-y-2.5 text-sm">
-                  <li><Link href="/features" className="text-stone-600 transition hover:text-amber-700 dark:text-stone-400 dark:hover:text-amber-300">Features</Link></li>
-                  <li><Link href="/styles" className="text-stone-600 transition hover:text-amber-700 dark:text-stone-400 dark:hover:text-amber-300">Styles</Link></li>
-                  <li><Link href="/blog" className="text-stone-600 transition hover:text-amber-700 dark:text-stone-400 dark:hover:text-amber-300">Blog</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-stone-400 dark:text-stone-500">Company</h4>
-                <ul className="space-y-2.5 text-sm">
-                  <li><Link href="/about" className="text-stone-600 transition hover:text-amber-700 dark:text-stone-400 dark:hover:text-amber-300">About</Link></li>
-                  <li><Link href="/contact" className="text-stone-600 transition hover:text-amber-700 dark:text-stone-400 dark:hover:text-amber-300">Contact</Link></li>
-                </ul>
-              </div>
-              <div>
-                <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.22em] text-stone-400 dark:text-stone-500">Legal</h4>
-                <ul className="space-y-2.5 text-sm">
-                  <li><Link href="/privacy" className="text-stone-600 transition hover:text-amber-700 dark:text-stone-400 dark:hover:text-amber-300">Privacy Policy</Link></li>
-                  <li><Link href="/terms" className="text-stone-600 transition hover:text-amber-700 dark:text-stone-400 dark:hover:text-amber-300">Terms of Service</Link></li>
-                </ul>
-              </div>
+
+        {/* Footer */}
+        <footer className="w-full border-t border-outline-variant/20 bg-surface-container-low">
+          <div className="flex flex-col md:flex-row justify-between items-center px-8 py-14 gap-8 max-w-screen-2xl mx-auto">
+            <Link href="/" className="text-xl font-serif italic text-on-background">Fitmixai</Link>
+            <div className="flex flex-wrap justify-center gap-8">
+              <Link className="site-link text-on-surface-variant hover:text-primary transition-colors text-sm" href="/features">Features</Link>
+              <Link className="site-link text-on-surface-variant hover:text-primary transition-colors text-sm" href="/styles">Styles</Link>
+              <Link className="site-link text-on-surface-variant hover:text-primary transition-colors text-sm" href="/blog">Blog</Link>
+              <Link className="site-link text-on-surface-variant hover:text-primary transition-colors text-sm" href="/about">About</Link>
+              <Link className="site-link text-on-surface-variant hover:text-primary transition-colors text-sm" href="/privacy">Privacy Policy</Link>
+              <Link className="site-link text-on-surface-variant hover:text-primary transition-colors text-sm" href="/terms">Terms</Link>
             </div>
-            <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-black/6 pt-8 text-xs text-stone-400 dark:border-white/8 dark:text-stone-500 sm:flex-row">
-              <span>&copy; {new Date().getFullYear()} Fitmixai. All rights reserved.</span>
-              <span>Built with AI, for fashion.</span>
+            <div className="text-on-surface-variant text-sm">
+              © {new Date().getFullYear()} Fitmixai. Built with AI, for fashion.
             </div>
           </div>
         </footer>
